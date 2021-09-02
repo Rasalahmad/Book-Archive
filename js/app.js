@@ -34,7 +34,6 @@ const displayBooks = (data) => {
         bookDetails.textContent = '';
         errorMessage.textContent = '';
         books.slice(0, 30).forEach(book => {
-            console.log(book)
             const div = document.createElement('div');
             div.classList.add('col');
             let coverPhoto = `https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg`;
