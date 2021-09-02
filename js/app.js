@@ -4,7 +4,7 @@ const loadBooks = () => {
     const searchInput = document.getElementById('search-btn');
     const searchText = searchInput.value;
     searchInput.value = '';
-    const url = `http://openlibrary.org/search.json?q=${searchText}`
+    const url = `https://openlibrary.org/search.json?q=${searchText}`
     if (searchText === '') {
         const errorMessage = document.getElementById('error');
         const result = document.getElementById('result');
