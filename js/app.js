@@ -34,6 +34,7 @@ const displayBooks = (data) => {
         bookDetails.textContent = '';
         errorMessage.textContent = '';
         books.slice(0, 30).forEach(book => {
+            console.log(book)
             const div = document.createElement('div');
             div.classList.add('col');
             let coverPhoto = `https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg`;
@@ -43,7 +44,7 @@ const displayBooks = (data) => {
             <div class="card-body">
                 <h5 class="card-title">${book.title}</h5>
                 <p class="card-text">by ${book.author_name ? book.author_name[0]: 'Not found'}</p>
-                <p class="card-text">Publisher: ${book.publisher[0] ? book.publisher[0]: 'Not found'}</p>
+                <p class="card-text">Publisher: ${book.publisher ? book.publisher[0]: 'Not found'}</p>
                 <p class="card-text">First Published : ${book.first_publish_year ? book.first_publish_year : 'Not found'}</p>
             </div>
          </div>
